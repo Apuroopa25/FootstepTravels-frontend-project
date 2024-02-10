@@ -107,12 +107,12 @@
     font-family: 'Mulish', sans-serif;
 }
 
-.main-heading .footstep-brand {
+.main-heading span#footstepbrand {
     color: #FEBE10;
     font-family: 'Merriweather', serif;
 }
 
-.main-heading .travels {
+.main-heading span#travel {
     color: #ffffff;
     font-family: 'Montserrat', sans-serif;
 }
