@@ -54,7 +54,7 @@
     letter-spacing: 1px;
 }
 
-.login-buttons .login {
+/* .login-buttons .login {
     border: none;
     color: #ffffff;
 }
@@ -63,13 +63,13 @@
     background-color: #FEBE10;
     color: #ffffff;
     font-weight: 500;
-}
+} */
 
-.login-buttons .register {
+.login-buttons button {
     background-color: #ffffff;
 }
 
-.login-buttons .register:hover {
+.login-buttons button:hover {
     background-color: #FEBE10;
     color: #ffffff;
     font-weight: 500;
@@ -133,6 +133,16 @@ button#booknow {
     width: 130px;
     border: none;
     padding: 5px 0px;
+}
+
+button#booknow:hover {
+    background: #ffffff;
+    color: #FEBE10;
+    font-weight: 400;
+}
+
+button#booknow:focus {
+    border: 1px solid #FEBE10;
 }
 
 /* Animation for  Country or place names */
