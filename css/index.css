@@ -10,7 +10,7 @@
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("/images/hambergurmenu.png")
+    background-image: url("../images/hambergurmenu.png")
 }
 
 .navbar-brand span.footstep-brand {
