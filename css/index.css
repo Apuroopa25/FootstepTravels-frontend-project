@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 /* Navigation styles start here */
 .navbar {
     /* background-color: #cc9e50; */
@@ -155,6 +159,11 @@ button#booknow:focus {
     border: 1px solid #FEBE10;
 }
 
+button#booknow a {
+    text-decoration: none;
+    color: black;
+}
+
 /* Animation for  Country or place names */
 @keyframes countriesanime {
     0% {
@@ -180,9 +189,257 @@ button#booknow:focus {
 
 }
 
+/* Book Now form section */
+.container,
+.container-fluid,
+.container-lg,
+.container-md,
+.container-sm,
+.container-xl,
+.container-xxl {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#book-now-section {
+    /* background-color: #00A693; */
+    /* height: 500px; */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    /* border: 1px solid #00a693; */
+    display: grid;
+    /* grid: 50% / auto; */
+    grid-template-columns: auto;
+}
+
+.row #form-image {
+    display: none;
+    width: 100%;
+    /* height: 500px; */
+    background-color: #00a693;
+    /* clip-path: circle(67% at 26% 48%); */
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.row #form-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#book-now-form {
+    width: 50%;
+    padding: 15px 0px;
+    border: 1px solid #00a693;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+#book-now-form h2 {
+    font-size: 25px;
+    color: #FEBE10;
+    border: #00a693 solid 1px;
+    border-radius: 0px 40px 40px 0px;
+    padding: 13px 20px;
+    background-color: #00A693;
+    width: fit-content;
+}
+
+#form-tobook form {
+    width: 100%;
+    padding: 15px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#form-tobook form label {
+    display: none;
+}
+
+#form-tobook form #form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+#form-tobook form input,
+select,
+textarea {
+    height: 50px;
+    /* width: ; */
+    /* outline: none; */
+    border: 1px solid #00A693;
+    padding: 0 10px;
+    background-color: none;
+    transition: .3s ease-in-out;
+    border-bottom: 2p solid #FFC72C;
+    border-radius: 20px;
+}
+
+/* #form-tobook form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: #FFC72C;
+} */
+
+#form-tobook form textarea {
+    resize: none;
+    height: auto;
+}
+
+#form-tobook form input,
+textarea {
+    caret-color: #FFC72C;
+}
+
+#form-tobook form #form-button {
+    background-color: #FEBE10;
+    padding: 10px;
+    border-radius: 30px;
+    border: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#form-tobook form #start-end-dates {
+    /* width: 100%; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* gap: 10px; */
+}
+
+/* packages styles starts here */
+#packages-section,
+#service-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#packages-section #packages-head,
+#Service-section #service-head {
+    position: relative;
+}
+
+#packages-section #packages-head p,
+#service-section #service-head p {
+    border-bottom: 1px solid #FEBE10;
+}
+
+#packages-section #packages-head #packages-heading,
+#service-section #service-head #service-heading {
+    position: absolute;
+    margin-top: -50px;
+    align-items: center;
+    background-color: #00a693;
+    text-align: center;
+    /* border: 1px solid #00a693; */
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+}
+
+.card {
+    border: 1px solid #00a693;
+    /* width: 100px; */
+}
+
+.card-img,
+.card-img-top {
+    height: 200px;
+}
+
+.card .card-body {
+    background-color: #8FBC8B;
+}
+
+.card-body .card-title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.card-body .card-text {
+    font-family: sans-serif;
+}
+
+.card-body .packages-price span {
+    color: #00a693;
+}
+
+
+/* Packages ratings */
+#ratings .fa-star,
+.fa-star-half-stroke {
+    color: #FFC72C;
+}
+
+/* packages Buy Now button */
+#packages-section button#package-button {
+    background: rgb(211, 232, 65);
+    background: -webkit-linear-gradient(#00a693, #d3e841, #ffc72c);
+    border-radius: 15px;
+    width: 130px;
+    border: none;
+    padding: 5px 0px;
+}
+
+#packages-section button#package-button:hover {
+    /* background: #ffffff; */
+    /* color: #FEBE10; */
+    border: 1px solid #ffffff;
+}
+
+#packages-section button#package-button:focus {
+    border: 1px solid #FEBE10;
+}
+
+#packages-section button#package-button a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Services styles starts here */
+/* #service-section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+#service-section #service-head {
+    position: relative;
+}
+
+#service-section #service-head p {
+    border-bottom: 1px solid #FEBE10;
+}
+
+#service-section #service-head #service-heading {
+    position: absolute;
+    margin-top: -50px;
+    align-items: center;
+    background-color: #00a693;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px 40px;
+    font-size: 18px;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    font-family: 'Merriweather', serif;
+} */
+
 @media only screen and (min-width: 700px) {
     .main-heading {
         font-size: 30px;
+    }
+
+    .row #form-image {
+        display: block;
     }
 }
 
@@ -193,6 +450,10 @@ button#booknow:focus {
         padding-left: 0.5rem;
         text-decoration: underline;
     }
+
+    .card-text {
+        height: 120px;
+    }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -200,5 +461,9 @@ button#booknow:focus {
     /* Hovering style for packages dropwn in navbar */
     .dropdown:hover .dropdown-menu {
         display: block;
+    }
+
+    #form-tobook form {
+        padding: 15px 100px;
     }
 }

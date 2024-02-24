@@ -17,6 +17,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital@1&display=swap" rel="stylesheet">
 
+    <!-- Font awesome icons -->
+    <script src="https://kit.fontawesome.com/45e5b64bf8.js" crossorigin="anonymous"></script>
+
 
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
@@ -34,6 +37,7 @@
 
 <body>
 
+    <!-- Header and Navigation bar -->
     <nav class="navbar navbar-expand-lg navbar-light ">
         <div class="container-fluid">
             <!-- DreamLand -->
@@ -54,12 +58,12 @@
                         <a class="nav-link" href="#">Book</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link dropdown-toggle" href="#packages-section" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             Packages
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#">United State</a></li>
+                            <li><a class="dropdown-item" href="#packages-section">United State</a></li>
                             <li><a class="dropdown-item" href="#">India</a></li>
                             <li><a class="dropdown-item" href="#">France</a></li>
                             <li><a class="dropdown-item" href="#">Germany</a></li>
@@ -91,9 +95,308 @@
             <h1 class="main-heading">Welcome to <span id="footstepbrand">FootStep</span> <span
                     id="travel">Travels</span></h1>
             <h2 class="secondary-heading">Visit <span class="fav-country"></span></h2>
-            <button id="booknow">Book Now</button>
+            <button id="booknow"><a href="#book-now-section">Book Now</a></button>
         </div>
     </section>
+
+
+    <!-- Book Now form -->
+    <section id="book-now-section" class="container">
+        <div class="row">
+            <div id="form-image" class="col">
+                <img src="/images/FT_logo-removebg-preview-original.png" alt="FT brand">
+            </div>
+
+            <div id="book-now-form" class="col">
+                <div>
+                    <h2 id="book-now-heading">Book Now</h2>
+                </div>
+                <div id="form-tobook">
+                    <form action="">
+                        <div id="form-group" class="form-group">
+                            <label for="exampleFormControlSelect1">Where to</label>
+                            <select class="" id="exampleFormControlSelect1">
+                                <option disabled selected hidden>Where to you want to go?</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </div>
+                        <div id="form-group" class="form-group">
+                            <label for="where-to">No of persons</label>
+                            <input type="text" id="where-to" placeholder="How many persons?" name="no_of_persons"
+                                required />
+                        </div>
+                        <div id="start-end-dates" class="row">
+                            <div id="form-group" class="form-group col">
+                                <label for="start-date">Start Date</label>
+                                <input type="date" placeholder="start date" name="start_date" required />
+                            </div>
+                            <div id="form-group" class="form-group col">
+                                <label for="end-date">End date</label>
+                                <input type="date" placeholder="end date" name="end_date" required />
+                            </div>
+                        </div>
+
+                        <textarea name="" id="" cols="30" rows="10"></textarea>
+                        <button type="submit" class="" id="form-button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <div id="packages-section" class="container justify-content-center">
+        <div id="packages-head">
+            <p id="packages-line"></p>
+            <div id="packages-heading">
+                <h2>Packages</h2>
+            </div>
+        </div>
+
+        <!-- Packages 1st row -->
+        <div class="row mt-5 mx-lg-4 justify-content-center">
+            <!-- Package 1 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-1-paris.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Paris</h5>
+                        <p class="card-text">The top 5 most popular places to visit in Paris are the Eiffel Tower,
+                            Louvre Museum, Notre-Dame Cathedral, Arc de
+                            Triomphe, and Palace of Versailles.</p>
+
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- Package 2 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-2-India.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">India</h5>
+                        <p class="card-text">Agra stands atop. As it homes the world's most beautiful monument, Taj
+                            Mahal, it reigns supreme in the list of famous
+                            tourist places in India.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$508</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Package 3 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-3-switz.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Switzerland</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package 4 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-4-russia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Russia</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package 5 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-5-america.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">America</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package 6 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-6-africa.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Africa</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package 7 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-7-albania.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Albannia</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package 8 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-8-dubai.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Dubai</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Package 9 -->
+            <div class="col-sm-8 col-md-6 col-lg-4 mb-4" id="package-card">
+                <div class="card" style="width: 18rem;">
+                    <img src="images/package-9-australia.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Australia</h5>
+                        <p class="card-text">Switzerland is known for its natural beauty, including mountains,
+                            lakes,
+                            and valleys. It's also known for its rich
+                            history, clocks, and food.</p>
+                        <div id="ratings">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <p class="packages-price" id="packages-price">Price: <span>$350</span></p>
+
+                        <button id="package-button"><a href="#book-now-section">Book Now</a></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Services -->
+    <!-- Packages -->
+    <div id="service-section" class="container">
+        <div id="service-head">
+            <p id="service-line"></p>
+            <div id="service-heading">
+                <h2>Services</h2>
+            </div>
+        </div>
+    </div>
 
     <!-- cdn links for Bootstrap 5 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
