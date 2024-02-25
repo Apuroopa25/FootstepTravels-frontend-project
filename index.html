@@ -31,6 +31,9 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
 
+    <!-- External javascript -->
+    <script src="index.js"></script>
+
     <!-- External CSS -->
     <link rel="stylesheet" href="css/index.css">
 </head>
@@ -70,7 +73,7 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Services</a>
+                        <a class="nav-link" href="#services">Services</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Gallery</a>
@@ -112,36 +115,53 @@
                     <h2 id="book-now-heading">Book Now</h2>
                 </div>
                 <div id="form-tobook">
-                    <form action="">
+                    <form action="" class=" align-content-center">
                         <div id="form-group" class="form-group">
-                            <label for="exampleFormControlSelect1">Where to</label>
-                            <select class="" id="exampleFormControlSelect1">
-                                <option disabled selected hidden>Where to you want to go?</option>
-                                <option>India</option>
-                                <option>America</option>
-                                <option>Africa</option>
-                                <option>Russia</option>
-                                <option>Albania</option>
-                            </select>
+                            <label for="whereto">Where to</label>
+                            <div class="input-wrapper where-to-place">
+                                <input required type="text" class="form-control" id="destination" list="whereto"
+                                    placeholder="Where To You Want To Go?" required />
+                                <datalist class="" id="whereto" name="where_to">
+                                    <option disabled selected hidden value="whereto">Where to you want to go?</option>
+                                    <option value="India">India</option>
+                                    <option value="America">America</option>
+                                    <option value="Africa">Africa</option>
+                                    <option value="Russia">Russia</option>
+                                    <option value="Albania">Albania</option>
+                                </datalist>
+                                <div>
+
+                                </div>
+                            </div>
                         </div>
                         <div id="form-group" class="form-group">
-                            <label for="where-to">No of persons</label>
-                            <input type="text" id="where-to" placeholder="How many persons?" name="no_of_persons"
-                                required />
+                            <label for="noofpersons">No of persons</label>
+                            <div class="input-wrapper no-of-persons">
+                                <input type="number" id="noofpersons" placeholder="How many persons?"
+                                    name="no_of_persons" value="" min="1" required />
+                            </div>
                         </div>
                         <div id="start-end-dates" class="row">
                             <div id="form-group" class="form-group col">
                                 <label for="start-date">Start Date</label>
-                                <input type="date" placeholder="start date" name="start_date" required />
+                                <div class="input-wrapper start-date">
+                                    <input onchange="setMinEndDate()" type="date" placeholder="start date"
+                                        id="start-date" name="start_date" value="" required />
+                                </div>
                             </div>
                             <div id="form-group" class="form-group col">
                                 <label for="end-date">End date</label>
-                                <input type="date" placeholder="end date" name="end_date" required />
+                                <div class="input-wrapper end-date">
+                                    <input type="date" placeholder="end date" id="end-date" min="" name="end_date"
+                                        value="" disabled required />
+                                </div>
                             </div>
                         </div>
 
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                        <button type="submit" class="" id="form-button">Submit</button>
+                        <textarea name="user_details" id="userdetails" rows="4" cols="50" minlength="50" maxlength="500"
+                            placeholder="Add your details" required></textarea>
+
+                        <button onclick="bookNowFn()" type="submit" class="" id="form-button">Submit</button>
                     </form>
                 </div>
             </div>
@@ -393,6 +413,55 @@
             <p id="service-line"></p>
             <div id="service-heading">
                 <h2>Services</h2>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <h2>Our services include</h2>
+            <div class="content-box">
+
+                <!--  Service Card 1 -->
+                <div class="content-card">
+                    <img src="images/services/affordable_hotels_1.png" alt="">
+                    <h3>Affordable Hotel</h3>
+                    <p>Lorem ipsum dolor sit consectetur amet adipisicing elit. Delectus quo, architecto velit</p>
+                </div>
+
+                <!--  Service Card 2 -->
+                <div class="content-card">
+                    <img src="images/services/foods-drinks_1.png" alt="">
+                    <h3>Food & Drinks</h3>
+                    <p>Lorem ipsum dolor sit consectetur amet adipisicing elit. Delectus quo, architecto velit</p>
+                </div>
+
+                <!--  Service Card 3 -->
+                <div class="content-card">
+                    <img src="images/services/safety-guide_1.png" alt="">
+                    <h3>Safety Guide</h3>
+                    <p>Lorem ipsum dolor sit consectetur amet adipisicing elit. Delectus quo, architecto velit</p>
+                </div>
+
+                <!--  Service Card 4 -->
+                <div class="content-card">
+                    <img src="images/services/car-rent_1.png" alt="">
+                    <h3>Rental Car</h3>
+                    <p>Lorem ipsum dolor sit consectetur amet adipisicing elit. Delectus quo, architecto velit</p>
+                </div>
+
+                <!--  Service Card 5 -->
+                <div class="content-card">
+                    <img src="images/services/tour-package_1.png" alt="">
+                    <h3>Tour Package</h3>
+                    <p>Lorem ipsum dolor sit consectetur amet adipisicing elit. Delectus quo, architecto velit</p>
+                </div>
+
+                <!--  Service Card 6 -->
+                <div class="content-card">
+                    <img src="images/services/customer-support_1.png" alt="">
+                    <h3>Customer Support</h3>
+                    <p>Lorem ipsum dolor sit consectetur amet adipisicing elit. Delectus quo, architecto velit</p>
+                </div>
+
             </div>
         </div>
     </div>
