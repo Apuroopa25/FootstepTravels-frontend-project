@@ -330,19 +330,25 @@ textarea {
 #packages-section #packages-head #packages-heading,
 #service-section #service-head #service-heading {
     position: absolute;
-    margin-top: -50px;
+    margin-top: -40px;
     align-items: center;
     background-color: #00a693;
     text-align: center;
     /* border: 1px solid #00a693; */
     border-radius: 20px;
-    padding: 10px 40px;
-    font-size: 18px;
+    padding: 5px 40px;
+    /* font-size: 10px; */
     width: fit-content;
     left: 50%;
     transform: translateX(-50%);
     color: #ffffff;
     font-family: 'Merriweather', serif;
+}
+
+#packages-section #packages-head #packages-heading h2,
+#service-section #service-head #service-heading h2 {
+    font-size: 20px;
+    padding-top: 3px;
 }
 
 .card {
