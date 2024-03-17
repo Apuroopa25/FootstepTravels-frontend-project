@@ -319,23 +319,27 @@ textarea {
 
 /* packages styles starts here */
 #packages-section,
-#service-section {
+#service-section,
+#gallery-section {
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
 #packages-section #packages-head,
-#Service-section #service-head {
+#Service-section #service-head,
+#gallery-section #gallery-head {
     position: relative;
 }
 
 #packages-section #packages-head p,
-#service-section #service-head p {
+#service-section #service-head p,
+#gallery-section #gallery-head p {
     border-bottom: 2px solid #FEBE10;
 }
 
 #packages-section #packages-head #packages-heading,
-#service-section #service-head #service-heading {
+#service-section #service-head #service-heading,
+#gallery-section #gallery-head #gallery-heading {
     position: absolute;
     margin-top: -40px;
     align-items: center;
@@ -353,7 +357,8 @@ textarea {
 }
 
 #packages-section #packages-head #packages-heading h2,
-#service-section #service-head #service-heading h2 {
+#service-section #service-head #service-heading h2,
+#gallery-section #gallery-head #gallery-heading h2 {
     font-size: 20px;
     padding-top: 3px;
 }
@@ -477,34 +482,41 @@ textarea {
 }
 
 
-/* #service-section {
-    margin-top: 100px;
-    margin-bottom: 100px;
+/* Gallery starts here */
+#gallery-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#service-section #service-head {
+#gallery-cards .galleryImages {
     position: relative;
 }
 
-#service-section #service-head p {
-    border-bottom: 1px solid #FEBE10;
+#gallery-cards .galleryImages img {
+    width: 100%;
+    /* height: 100px; */
+    object-fit: cover;
+    transform: scale3d();
 }
 
-#service-section #service-head #service-heading {
+#gallery-cards .galleryImages img:hover {}
+
+#gallery-cards .galleryImages #gallery-desc {
     position: absolute;
-    margin-top: -50px;
-    align-items: center;
-    background-color: #00a693;
-    text-align: center;
-    border-radius: 20px;
-    padding: 10px 40px;
-    font-size: 18px;
-    width: fit-content;
-    left: 50%;
-    transform: translateX(-50%);
+    background: rgba(45, 48, 45, 0.7);
+    z-index: 10px;
+    bottom: 0%;
     color: #ffffff;
-    font-family: 'Merriweather', serif;
-} */
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
+
+
 
 @media only screen and (max-width: 700px) {
     .row {
@@ -555,6 +567,22 @@ textarea {
         flex-direction: column;
         gap: 10px;
     }
+
+    /* Gallery starts here */
+    #gallery-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        margin-top: 30px;
+    }
+
+    #gallery-cards .galleryImages img {
+        width: 240px;
+        height: 250px;
+
+    }
+
 }
 
 
