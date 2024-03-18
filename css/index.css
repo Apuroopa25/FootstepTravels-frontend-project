@@ -320,26 +320,30 @@ textarea {
 /* packages styles starts here */
 #packages-section,
 #service-section,
-#gallery-section {
+#gallery-section,
+#about-us-section {
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
 #packages-section #packages-head,
 #Service-section #service-head,
-#gallery-section #gallery-head {
+#gallery-section #gallery-head,
+#about-us-section #about-us-head {
     position: relative;
 }
 
 #packages-section #packages-head p,
 #service-section #service-head p,
-#gallery-section #gallery-head p {
+#gallery-section #gallery-head p,
+#about-us-section #about-us-head p {
     border-bottom: 2px solid #FEBE10;
 }
 
 #packages-section #packages-head #packages-heading,
 #service-section #service-head #service-heading,
-#gallery-section #gallery-head #gallery-heading {
+#gallery-section #gallery-head #gallery-heading,
+#about-us-section #about-us-head #about-us-heading {
     position: absolute;
     margin-top: -40px;
     align-items: center;
@@ -358,7 +362,8 @@ textarea {
 
 #packages-section #packages-head #packages-heading h2,
 #service-section #service-head #service-heading h2,
-#gallery-section #gallery-head #gallery-heading h2 {
+#gallery-section #gallery-head #gallery-heading h2,
+#about-us-section #about-us-head #about-us-heading h2 {
     font-size: 20px;
     padding-top: 3px;
 }
@@ -486,10 +491,11 @@ textarea {
 #gallery-cards {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     gap: 50px;
-    margin-top: 30px;
+    margin-top: 70px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #gallery-cards .galleryImages {
@@ -503,7 +509,11 @@ textarea {
     transform: scale3d();
 }
 
-#gallery-cards .galleryImages img:hover {}
+#gallery-cards .galleryImages:hover {
+    /* margin-top: 50px; */
+    transition: all 2s ease-in;
+    transform: scale(1.1) rotate(-7deg);
+}
 
 #gallery-cards .galleryImages #gallery-desc {
     position: absolute;
@@ -514,10 +524,86 @@ textarea {
     width: 100%;
     text-align: center;
     padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* about-us section starts here */
+#about-us-rows {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about-us-rows #about-us {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 
+#about-us-rows img {
+    width: 100%;
+    height: 350px;
+    background-color: #00a693;
+    object-fit: cover;
+}
 
+#about-description {
+    margin: 20px 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+#about-description p {
+    font-family: 'Merriweather', serif;
+}
+
+/* Footer section */
+.footer-section {
+    width: 100%;
+    background-color: #8FBC8B;
+    /* height: 100px; */
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    justify-content: space-evenly;
+}
+
+.brand-social {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.social-links .fa-brands {
+    color: #ffffff;
+    margin-top: 35px;
+}
+
+.social-links .fa-brands:hover {
+    color: #D3E841;
+    cursor: pointer;
+}
+
+.copyrights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+}
+
+/* responsive styles starts here */
 @media only screen and (max-width: 700px) {
     .row {
         --bs-gutter-x: 0rem;
@@ -550,6 +636,12 @@ textarea {
         width: 250px;
     }
 
+    #about-description {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
 }
 
 @media only screen and (min-width: 700px) {
@@ -574,13 +666,28 @@ textarea {
         display: flex;
         flex-direction: row;
         gap: 50px;
-        margin-top: 30px;
     }
 
     #gallery-cards .galleryImages img {
         width: 240px;
         height: 250px;
 
+    }
+
+    #about-us-rows #about-us {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .footer-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .copyrights {
+        margin-top: 20px;
+        font-size: 20px;
     }
 
 }
