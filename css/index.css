@@ -722,3 +722,78 @@ textarea {
         padding: 15px 80px;
     }
 }
+
+
+
+
+
+
+
+
+.modal-body {
+    /* margin-left: 80px; */
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+    /* Adjust the margin for form elements */
+}
+
+
+/* Style for login link */
+#loginLink {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#loginLink a {
+    color: skyblue;
+    text-decoration: none;
+}
+
+#loginLink a:hover {
+    text-decoration: underline;
+}
+
+
+
+.modal-content {
+    width: 600px;
+    height: 340px;
+    margin-left: -80px;
+}
+
+#login-modal-content {
+    width: 300px;
+}
+
+#loginLink {
+    text-align: right;
+}
+
+
+/* Custom CSS for registration modal */
+.registration-modal-content {
+    width: 650px;
+    height: 440px;
+}
+
+.input-wrapper,
+select {
+    height: 37px;
+}
+
+.registration-modal-content .modal-body {
+    margin-top: 20px;
+    /* Adjust the value as needed */
+}
+
+#reg-button,
+#login-button {
+    width: 100%;
+    margin-top: 20px;
+    background-color: #00a693;
+    border-color: #00A693;
+}

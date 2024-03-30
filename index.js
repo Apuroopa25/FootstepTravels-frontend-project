@@ -46,3 +46,100 @@ function bookNowFn() {
         }
     }
 }
+
+// registration  form validation
+document.getElementById("registerForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent form submission
+
+    // Validation
+    let fullName = document.getElementById("fullName").value.trim();
+    let contact = document.getElementById("contact").value.trim();
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
+    let dob = document.getElementById("dob").value;
+    let gender = document.getElementById("gender").value;
+
+    // Regular expressions for validation
+    var contactRegex = /^\d{10}$/; // Change this regex according to your phone number format
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{"':;?/>.<,])(?=.*[^\s]).{8,}$/;
+
+    // Validation checks
+    var errors = [];
+
+    if (!fullName) {
+        errors.push("First name is required.");
+    }
+
+    if (!contact.match(contactRegex)) {
+        errors.push("Contact number is invalid.");
+    }
+
+    if (!email.match(emailRegex)) {
+        errors.push("Email address is invalid.");
+    }
+
+    if (!password.match(passwordRegex)) {
+        errors.push("Password must contain at least 8 characters, including uppercase, lowercase, numbers, and special characters.");
+    }
+
+    if (!dob) {
+        errors.push("Date of birth is required.");
+    } else {
+        // Check if the user is at least 18 years old
+        var dobDate = new Date(dob);
+        var currentDate = new Date();
+        var minAgeDate = new Date();
+        minAgeDate.setFullYear(currentDate.getFullYear() - 18);
+        if (dobDate > minAgeDate) {
+            errors.push("You must be at least 18 years old to register.");
+        }
+    }
+
+    if (!gender) {
+        errors.push("Gender is required.");
+    }
+    // Check if there are any errors
+    if (errors.length > 0) {
+        // Display errors
+        alert(errors.join("\n"));
+    } else {
+        // If no errors, registration successful
+        alert("Registration successful!");
+        // You can optionally submit the form here if needed
+        // document.getElementById('registrationForm').submit();
+    }
+});
+
+
+// Login Form Validation
+$(document).ready(function () {
+    // Define the unique email and password
+    var uniqueEmail = "a@gmail.com";
+    var uniquePassword = "Password@1234";
+
+    $('#loginForm').submit(function (e) {
+        e.preventDefault();
+
+        var email = $('#email-id').val().trim();
+        var password = $('#password-id').val().trim();
+
+        // Regular expression for email format validation
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (email === '' || password === '') {
+            alert('Email and password are required');
+        } else if (email !== uniqueEmail) {
+            alert('Email is incorrect');
+        } else if (!email.match(emailPattern)) {
+            alert('Please enter a valid email address');
+        } else if (password.length < 6) {
+            alert('Password must be at least 6 characters long');
+        } else if (password !== uniquePassword) {
+            alert('Incorrect password');
+        } else {
+            alert('Loggedin Successfully');
+            // Additional actions after successful login
+        }
+    });
+});
