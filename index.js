@@ -68,7 +68,7 @@ document.getElementById("registerForm").addEventListener("submit", function (eve
     var errors = [];
 
     if (!fullName) {
-        errors.push("First name is required.");
+        errors.push("Full name is required.");
     }
 
     if (!contact.match(contactRegex)) {
